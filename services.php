@@ -2,7 +2,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
 
 $title = 'Services';
-$bgImage = '/SpDesign/assets/images/banner-bg.jpg';
+$bgImage = '/SpDesign/resources/images/banner-bg.jpg';
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
 ?>
 

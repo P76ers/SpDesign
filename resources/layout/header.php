@@ -14,14 +14,13 @@
   </title>
 
   <!-- Bootstrap core CSS -->
-  <link href="/SpDesign/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/SpDesign/resources/layout/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="/SpDesign/assets/css/fontawesome.css">
-  <!-- <link rel="stylesheet" href="/SpDesign/assets/css/templatemo-572-designer.css"> -->
-  <link rel="stylesheet" type='text/css' href="/SpDesign/assets/css/style.php?bgImage='<?= $bgImage ?>'">
-  <link rel="stylesheet" href="/SpDesign/assets/css/owl.css">
-  <link rel="stylesheet" href="/SpDesign/assets/css/animate.css">
+  <link rel="stylesheet" href="/SpDesign/resources/layout/css/fontawesome.css">
+  <link rel="stylesheet" type='text/css' href="/SpDesign/resources/layout/css/style.php?bgImage='<?= $bgImage ?>'">
+  <link rel="stylesheet" href="/SpDesign/resources/layout/css/owl.css">
+  <link rel="stylesheet" href="/SpDesign/resources/layout/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <!--
 
@@ -89,15 +88,15 @@
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="/SpDesign/vendor/jquery/jquery.min.js"></script>
-  <script src="/SpDesign/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/SpDesign/resources/jquery/jquery.min.js"></script>
+  <script src="/SpDesign/resources/js/bootstrap.min.js"></script>
 
-  <script src="/SpDesign/assets/js/isotope.min.js"></script>
-  <script src="/SpDesign/assets/js/owl-carousel.js"></script>
+  <script src="/SpDesign/resources/js/isotope.min.js"></script>
+  <script src="/SpDesign/resources/js/owl-carousel.js"></script>
 
-  <script src="/SpDesign/assets/js/tabs.js"></script>
-  <script src="/SpDesign/assets/js/popup.js"></script>
-  <script src="/SpDesign/assets/js/custom.js"></script>
+  <script src="/SpDesign/resources/js/tabs.js"></script>
+  <script src="/SpDesign/resources/js/popup.js"></script>
+  <script src="/SpDesign/resources/js/custom.js"></script>
   <script>
     setTimeout(function () {
       $('.loader').fadeToggle();

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-2">
         <div class="about-widget">
-          <img src="/SpDesign/assets/images/spLogo.png" alt="S&P Design" width="100px">
+          <img src="/SpDesign/resources/images/spLogo.png" alt="S&P Design" width="100px">
           <p>Don’t just fit in, find your own perfect fit.</p>
         </div>
       </div>
