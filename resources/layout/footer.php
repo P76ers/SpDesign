@@ -36,7 +36,7 @@
             <li><a href="#">Hosen</a></li>
             <li><a href="#">Hemden</a></li>
             <li><a href="#">Mäntel</a></li>
-            <li><a href="#">MäntelSchuhe</a></li>
+            <li><a href="#">Schuhe</a></li>
           </ul>
         </div>
       </div>
