@@ -74,33 +74,10 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="header-text">
-            <img class="logo" src="/SpDesign/resources/images/spLogo.png" alt="SpLogo" width="166px" height="128px">
+            <img class="logo" src="/SpDesign/resources/images/spLogo.png" alt="SpLogo">
           </div>
         </div>
       </div>
     </div>
   </div>
   </div>
-
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="/SpDesign/resources/jquery/jquery.min.js"></script>
-  <script src="/SpDesign/resources/js/bootstrap.min.js"></script>
-
-  <script src="/SpDesign/resources/js/isotope.min.js"></script>
-  <script src="/SpDesign/resources/js/owl-carousel.js"></script>
-
-  <script src="/SpDesign/resources/js/tabs.js"></script>
-  <script src="/SpDesign/resources/js/popup.js"></script>
-  <script src="/SpDesign/resources/js/custom.js"></script>
-  <script>
-    setTimeout(function () {
-      $('.loader').fadeToggle();
-    }, 1500);
-
-    $("a[href='#top']").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, "slow");
-      return false;
-    });
-  </script>

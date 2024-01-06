@@ -105,8 +105,44 @@
   </div>
 </footer>
 
-</script>
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="/SpDesign/resources/jquery/jquery.min.js"></script>
+<script src="/SpDesign/resources/js/bootstrap.min.js"></script>
+<script src="/SpDesign/resources/js/isotope.min.js"></script>
+<script src="/SpDesign/resources/js/owl-carousel.js"></script>
+<script src="/SpDesign/resources/js/tabs.js"></script>
+<script src="/SpDesign/resources/js/popup.js"></script>
+<script src="/SpDesign/resources/js/custom.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+<script>
+  setTimeout(function () {
+    $('.loader').fadeToggle();
+  }, 1500);
 
+  $("a[href='#top']").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+  $("a[href='#top']").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+
+  var elem = document.querySelector(".grid");
+  var iso = new Isotope(elem, {
+    // options
+    itemSelector: ".grid-item",
+    layoutMode: "masonry",
+  });
+
+  imagesLoaded(document.querySelector(".grid"), function (instance) {
+    var iso = new Isotope(".grid", {
+      itemSelector: ".grid-item",
+    });
+  });
+</script>
 </body>
 
 </html>
