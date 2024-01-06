@@ -1,12 +1,15 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
-wrongUrl();
+include_once($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
 
-$title = 'Kontakt';
+$title = 'Services';
 $bgImage = '/SpDesign/resources/images/banner-bg.jpg';
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
 ?>
 
+
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
+?>
 
 
 <?php

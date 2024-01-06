@@ -1,6 +1,7 @@
 <nav class="main-navigation navbar navbar-expand-lg navbar-light">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="/SpDesign/resources/images/white-logo.png" alt=""></a>
+    <!-- <a class="navbar-brand" href="index.html"><img src="/SpDesign/resources/images/spLogo.png" alt="SpLogo"
+        height="30px"></a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,8 +20,8 @@
             href="services.php">Services</a>
         </li>
         <li class="nav-item">
-          <a class="<?= urlIs("/SpDesign/kontakt.php") ? "nav-link active" : "nav-link" ?>" href="kontakt.php">Kontakt
-            Us</a>
+          <a class="<?= urlIs("/SpDesign/kontakt.php") ? "nav-link active" : "nav-link" ?>"
+            href="kontakt.php">Kontakt</a>
         </li>
         <li class="nav-item">
           <a class="<?= urlIs("/SpDesign/login.php") ? "nav-link active" : "nav-link" ?>" href="

@@ -26,7 +26,7 @@ $background_url = $_GET["bgImage"];
   }
 
   img {
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
   }
 
@@ -1563,5 +1563,9 @@ $background_url = $_GET["bgImage"];
     color: #ffffff;
   }
 
+  .logo {
+    opacity: 0.5;
+  }
+
   /*# sourceMappingURL=style.css.map */
-</style>yle>yle>
+</style>

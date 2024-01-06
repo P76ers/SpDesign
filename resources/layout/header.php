@@ -74,15 +74,12 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="header-text">
-            <h6>We Provide Everything</h6>
-            <h2><em>Interior</em> Designer</h2>
-            <div class="white-button">
-              <a href="#">Discover More</a>
-            </div>
+            <img class="logo" src="/SpDesign/resources/images/spLogo.png" alt="SpLogo" width="166px" height="128px">
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
 
