@@ -143,6 +143,49 @@
     });
   });
 </script>
+
+<script src="/SpDesign/node_modules/jquery-datetimepicker/jquery.js"></script>
+<script
+  src="/SpDesign/node_modules/jquery-datetimepicker/node_modules/php-date-formatter/js/php-date-formatter.min.js"></script>
+<script src="/SpDesign/node_modules/jquery-datetimepicker/node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="/SpDesign/node_modules/jquery-datetimepicker/jquery.datetimepicker.js"></script>
+
+<script>
+  jQuery.datetimepicker.setLocale('de');
+  jQuery("#datetimepicker").datetimepicker({
+    i18n: {
+      de: {
+        months: [
+          'Januar', 'Februar', 'März', 'April',
+          'Mai', 'Juni', 'Juli', 'August',
+          'September', 'Oktober', 'November', 'Dezember',
+        ],
+        dayOfWeek: [
+          "So.", "Mo", "Di", "Mi",
+          "Do", "Fr", "Sa.",
+        ]
+      }
+    },
+    allowTimes: [
+      '10:00',
+      '11:00',
+      '12:00',
+      '14:00',
+      '15:00',
+      '16:00',
+      '17:00',
+      '18:00',
+    ],
+    onGenerate: function (ct) {
+      jQuery(this).find('.xdsoft_date.xdsoft_weekend')
+        .addClass('xdsoft_disabled');
+    },
+    minDate: '+1970/01/03',
+    weekends: ['01.01.2014', '02.01.2014', '03.01.2014', '04.01.2014', '05.01.2014', '06.01.2014'],
+    format: "d.m.Y H:i",
+    inline: true,
+  });
+</script>
 </body>
 
 </html>

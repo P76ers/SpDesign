@@ -9870,3 +9870,10 @@ fieldset:disabled .btn {
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
+div.date {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
