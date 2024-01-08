@@ -5,7 +5,6 @@ wrongUrl();
 $title = 'Produkte';
 $bgImage = '/SpDesign/resources/images/banner-bg.jpg';
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
-
 ?>
 
 <?php
