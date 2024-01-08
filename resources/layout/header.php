@@ -14,6 +14,7 @@
   </title>
 
   <!-- Bootstrap core CSS -->
+  <!-- <link href="/SpDesign/resources/layout/css/table.css" rel="stylesheet"> -->
   <link href="/SpDesign/resources/layout/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Additional CSS Files -->
@@ -23,6 +24,9 @@
   <link rel="stylesheet" href="/SpDesign/resources/layout/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" type="text/css" href="/SpDesign/resources/layout/css/date.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" />
+
 </head>
 
 <body>
