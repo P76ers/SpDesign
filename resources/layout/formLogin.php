@@ -24,21 +24,22 @@
                         up</a></u>
                   </div>
                 </div>
+
                 <div class="col-lg-6">
                   <input name="first-name" type="text" id="first-name" placeholder="Username*" required="">
                 </div>
                 <div class="col-lg-6">
                   <input name="pw" type="password" id="pw" placeholder="Password*" required="">
                 </div>
-                <div class="col-lg-12 date">
 
+                <div class="col-lg-12 date">
                   <div class="service-item">
                     <img src="/SpDesign/resources/captcha/captcha.php">
                   </div>
 
                 </div>
                 <div class="col-lg-12">
-                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
+                  <button type="submit" id="form-submit" class="main-button ">LogIn</button>
                 </div>
               </div>
             </form>

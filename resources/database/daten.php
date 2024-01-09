@@ -13,8 +13,6 @@ createDB("suits");
 // insertInto("artikelkategorien", "'Accessoires'", "'access.png'", "'Stilvollle Accessoires!'");
 
 
-// insertInto("artikel", "'Hose1'", "'Hose'", 1.99, "'hose.png'", 0, 4);
-
 // insertInto("kunden", "'Vorname'", "'Nachname'", "'Straße'", 22045, "'Hamburg'", "'015734045599'", "'p@gmail.com'");
 
 

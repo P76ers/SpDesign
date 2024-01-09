@@ -86,13 +86,10 @@ function createTables()
   $sql = "CREATE TABLE IF NOT EXISTS kunden 
         (
           KundenID int AUTO_INCREMENT PRIMARY KEY, 
-          Vorname varchar(20), 
-          Nachname varchar(20), 
-          Straße varchar(60), 
-          PLZ varchar(10), 
-          Ort varchar(15), 
-          Telefon varchar(24), 
+          Username varchar(20), 
+          Password varchar(20),   
           Email varchar(50), 
+          Privilegien varchar(10), 
           UNIQUE (Email)
         ) Engine=InnoDB;";
   mysqli_query($con, $sql);
@@ -104,6 +101,7 @@ function createTables()
               Datum  varchar(10),
               Uhrzeit varchar(10),
               Berater varchar(10), 
+              Message longtext, 
               KundenNr int, 
               CONSTRAINT fkKunden FOREIGN KEY (KundenNr) 
                 REFERENCES kunden (KundenID)
