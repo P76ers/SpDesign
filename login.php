@@ -5,6 +5,8 @@ wrongUrl();
 $title = 'Login';
 $bgImage = '/SpDesign/resources/images/banner-bg.jpg';
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
+
+include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/formLogin.php");
 ?>
 
 

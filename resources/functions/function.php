@@ -15,7 +15,8 @@ function wrongUrl()
     "/SpDesign/produkte.php" => "",
     "/SpDesign/services.php" => "",
     "/SpDesign/kontakt.php" => "",
-    "/SpDesign/login.php" => ""
+    "/SpDesign/login.php" => "",
+    "/SpDesign/signUp.php" => ""
   ];
 
 

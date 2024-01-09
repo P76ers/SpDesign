@@ -22,7 +22,9 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="section-heading">
-                    <h2>Don't be Hesitated<br><em>Send a message now</em>!</h2>
+                    <h2>Vereinbare einen Termin</h2> <br><b style="color: #FF565B">Need an account?</b> <u><a
+                        href="/SpDesign/signUp.php">Sign
+                        up</a></u>
                   </div>
                 </div>
                 <div class="col-lg-6">
