@@ -24,4 +24,188 @@ function wrongUrl()
   }
 }
 
+function dbConnect()
+{
+  $host = "localhost";
+  $user = "root";
+  $passw = "";
+  $db = "suits";
+
+  $con = mysqli_connect($host, $user, $passw, $db);
+  // echo "Connecting to";
+  return $con;
+}
+
+function createDB($db)
+{
+  $host = "localhost";
+  $user = "root";
+  $passw = "";
+
+  $con = mysqli_connect($host, $user, $passw);
+
+  $sql = "CREATE DATABASE IF NOT EXISTS " . $db;
+  mysqli_query($con, $sql);
+
+  createTables();
+}
+
+function createTables()
+{
+  $con = dbConnect();
+
+  $sql = "CREATE TABLE IF NOT EXISTS artikelkategorien
+            (
+              KategorieID int AUTO_INCREMENT PRIMARY KEY,
+              Kategoriename varchar(20),
+              Image varchar(40), 
+              Kategoriebeschreibung longtext
+            ) 
+            Engine=InnoDB;
+          ";
+  mysqli_query($con, $sql);
+
+  $sql = "CREATE TABLE IF NOT EXISTS artikel
+            (
+              ArtikeliD int AUTO_INCREMENT PRIMARY KEY,
+              Artikelname varchar(40),
+              Artikelbeschreibung longtext,
+              Einzelpreis decimal(19,2),
+              Image varchar(40), 
+              Auslaufartikel tinyint(1),
+              KategorieNr int(11),
+              CONSTRAINT fkArtikelkategorien FOREIGN KEY (KategorieNr) 
+                REFERENCES artikelkategorien(KategorieID)
+            ) 
+            Engine=InnoDB;
+          ";
+  mysqli_query($con, $sql);
+
+
+  $sql = "CREATE TABLE IF NOT EXISTS kunden 
+        (
+          KundenID int AUTO_INCREMENT PRIMARY KEY, 
+          Vorname varchar(20), 
+          Nachname varchar(20), 
+          Straße varchar(60), 
+          PLZ varchar(10), 
+          Ort varchar(15), 
+          Telefon varchar(24), 
+          Email varchar(50), 
+          UNIQUE (Email)
+        ) Engine=InnoDB;";
+  mysqli_query($con, $sql);
+
+  $sql = "CREATE TABLE IF NOT EXISTS termine
+            (
+              TerminID int(11) AUTO_INCREMENT PRIMARY KEY,
+              Status int(11),
+              Datum  varchar(10),
+              Uhrzeit varchar(10),
+              Berater varchar(10), 
+              KundenNr int, 
+              CONSTRAINT fkKunden FOREIGN KEY (KundenNr) 
+                REFERENCES kunden (KundenID)
+            ) 
+            Engine=InnoDB;
+          ";
+  mysqli_query($con, $sql);
+
+  $sql = "CREATE TABLE IF NOT EXISTS bestellungen 
+            (
+              Bestellid int AUTO_INCREMENT PRIMARY KEY,
+              Bestelldatum varchar(20),
+              KundenNr int(11),
+              CONSTRAINT fkBestellungen FOREIGN KEY (KundenNr) 
+                REFERENCES Kunden(KundenID)
+            )
+            Engine=InnoDB;";
+  mysqli_query($con, $sql);
+
+  $sql = "CREATE TABLE IF NOT EXISTS bestellungdetails
+            (
+              ArtikelNr int(11),
+              BestellNr int(11),
+              Bestelldatum varchar(20),
+              Anzahl  int(11),
+              PRIMARY KEY (ArtikelNr, BestellNr),
+              CONSTRAINT fkArtikel FOREIGN KEY(ArtikelNr) 
+                REFERENCES artikel(ArtikelID),
+              CONSTRAINT fkBestellungdetails FOREIGN KEY (BestellNr) 
+                REFERENCES bestellungen (BestellID)
+            ) 
+            Engine=InnoDB;
+          ";
+  mysqli_query($con, $sql);
+}
+
+function dropDB($db)
+{
+  $con = dbConnect();
+  $sql = "DROP DATABASE " . $db;
+
+  mysqli_query($con, $sql);
+}
+
+function insertInto(...$tableValues)
+{
+  // echo '<pre>', var_dump($tableValues), '</pre>';
+  $con = dbConnect();
+
+  $table = $tableValues[0];
+
+  $values = "";
+  for ($i = 1; $i < count($tableValues); $i++) {
+    $values .= $tableValues[$i] . ", ";
+  }
+
+  $values = trim($values, ", ");
+  // echo $values;
+
+  $header = "";
+  switch ($table) {
+    case 'artikelkategorien':
+      $header = "
+                Kategoriename, 
+                Image, 
+                Kategoriebeschreibung
+              ";
+      break;
+
+    case 'artikel':
+      $header = "
+                  Artikelname, 
+                  Artikelbeschreibung, 
+                  Einzelpreis, 
+                  Image, Auslaufartikel, 
+                  KategorieNr
+                ";
+      break;
+    case 'kunden':
+      $header = "
+                  Vorname, 
+                  Nachname, 
+                  Straße, 
+                  PLZ, 
+                  Ort, 
+                  Telefon, 
+                  Email
+                ";
+  }
+  // echo $header;
+
+  $sql = 'INSERT INTO ' . $tableValues[0] . '
+        (
+          ' . $header . '
+        ) 
+        VALUES 
+        (
+          ' . $values . '
+        );';
+
+  // echo $sql;
+
+  mysqli_query($con, $sql);
+}
+
 ?>

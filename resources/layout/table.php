@@ -81,6 +81,12 @@
         <td>Item 4</td>
         <td>$11</td>
       </tr>
+      <tr>
+        <td></td>
+        <td>12</td>
+        <td>Item 4</td>
+        <td>$12</td>
+      </tr>
     </tbody>
   </table>
 
