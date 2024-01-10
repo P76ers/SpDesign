@@ -1,3 +1,39 @@
+<?php
+$con = dbConnect();
+
+$sql = "SELECT 
+          Artikelname, 
+          Artikelbeschreibung, 
+          Einzelpreis, 
+          Image
+        FROM artikel
+        ";
+
+$listeArtikelHeader = mysqli_query($con, $sql);
+
+$zeileArtikelHeader = mysqli_fetch_assoc($listeArtikelHeader);
+
+$i = 0;
+foreach ($zeileArtikelHeader as $key => $value) {
+  $arrArtikelHeader[$i] = $key;
+  $i++;
+}
+
+$listeArtikelValues = mysqli_query($con, $sql);
+
+$i = 0;
+while ($zeile = mysqli_fetch_assoc($listeArtikelValues)) {
+  foreach ($zeile as $key => $value) {
+    $arrArtikelValues[$i][$key] = $value;
+  }
+  $i++;
+}
+
+// echo $arrArtikelValues[0][$arrArtikelHeader[1]];
+// echo '<pre>', var_dump($arrArtikelHeader), '</pre>';
+// echo '<pre>', var_dump($arrArtikelValues), '</pre>';
+?>
+
 <form action="">
   <table class="'table table-striped" data-toggle="table" data-pagination="true" data-search="true"
     data-show-columns="true" data-show-columns="true" data-show-refresh="true" data-show-columns-toggle-all="true"
@@ -6,87 +42,34 @@
     data-checkbox-header="false" data-click-to-select="true" data-click-to-select="true"
     data-pagination-pre-text="Previous" data-pagination-next-text="Next" data-search-accent-neutralise="true"
     data-search-highlight="true" data-select-item-name="id" data-id-field="id" id="table">
-    <thead class=" table-dark">
+    <thead class="table-dark">
       <tr>
         <th data-field="state" data-checkbox="true"></th>
-        <th data-sortable="true" data-field="id">Item ID</th>
-        <th data-sortable="true" data-field="name">Item Name</th>
-        <th data-sortable="true" data-field="price">Item Price</th>
+        <th data-sortable="true" data-field="id">
+          <?= $arrArtikelHeader[0] ?>
+        </th>
+        <th data-sortable="true" data-field="name">
+          <?= $arrArtikelHeader[1] ?>
+        </th>
+        <th data-sortable="true" data-field="price">
+          <?= $arrArtikelHeader[2] ?>
+        </th>
+        <th data-sortable="true" data-field="bilder">
+          <?= $arrArtikelHeader[2] ?>
+        </th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td>1</td>
-        <td>Item 1</td>
-        <td>$1</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>2</td>
-        <td>Item 2</td>
-        <td>$2</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>3</td>
-        <td>Item 3</td>
-        <td>$3</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>4</td>
-        <td>Item 4</td>
-        <td>$4</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>5</td>
-        <td>Item 4</td>
-        <td>$5</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>6</td>
-        <td>Item 4</td>
-        <td>$6</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>7</td>
-        <td>Item 4</td>
-        <td>$7</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>8</td>
-        <td>Item 4</td>
-        <td>$8</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>9</td>
-        <td>Item 4</td>
-        <td>$9</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>10</td>
-        <td>Item 4</td>
-        <td>$10</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>11</td>
-        <td>Item 4</td>
-        <td>$11</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>12</td>
-        <td>Item 4</td>
-        <td>$12</td>
-      </tr>
+      <?php
+      for ($i = 0; $i < count($arrArtikelValues); $i++) {
+        echo "<tr><td></td> ";
+        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[0]] . "</td>";
+        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[1]] . "</td>";
+        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[2]] . "</td>";
+        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[3]] . "</td>";
+        echo "</tr>";
+      }
+      ?>
     </tbody>
   </table>
 
