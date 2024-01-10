@@ -182,13 +182,10 @@ function insertInto(...$tableValues)
       break;
     case 'kunden':
       $header = "
-                  Vorname, 
-                  Nachname, 
-                  Straße, 
-                  PLZ, 
-                  Ort, 
-                  Telefon, 
-                  Email
+                  Username, 
+                  Password, 
+                  Email, 
+                  Privilegien
                 ";
   }
   // echo $header;

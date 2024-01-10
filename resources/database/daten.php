@@ -13,7 +13,10 @@ createDB("suits");
 // insertInto("artikelkategorien", "'Accessoires'", "'access.png'", "'Stilvollle Accessoires!'");
 
 
-// insertInto("kunden", "'Vorname'", "'Nachname'", "'Straße'", 22045, "'Hamburg'", "'015734045599'", "'p@gmail.com'");
+// insertInto("kunden", "'Susan'", "'pw1'", "'susan@gmail.com'", "'admin'");
+// insertInto("kunden", "'Sadaf'", "'pw2'", "'sadaf@gmail.com'", "'admin'");
+// insertInto("kunden", "'P'", "'pw3'", "'p@gmail.com'", "'admin'");
+// insertInto("kunden", "'dummy'", "'pw4'", "'dummy@gmail.com'", "'none'");
 
 
 ?>
