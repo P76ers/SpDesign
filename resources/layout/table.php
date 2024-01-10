@@ -51,23 +51,24 @@ while ($zeile = mysqli_fetch_assoc($listeArtikelValues)) {
         <th data-sortable="true" data-field="name">
           <?= $arrArtikelHeader[1] ?>
         </th>
-        <th data-sortable="true" data-field="price">
+        <th data-sortable="true" data-field="Einzelpreis">
+
           <?= $arrArtikelHeader[2] ?>
         </th>
         <th data-sortable="true" data-field="bilder">
-          <?= $arrArtikelHeader[2] ?>
+          <!-- <?= $arrArtikelHeader[3] ?> -->
         </th>
       </tr>
     </thead>
     <tbody>
       <?php
       for ($i = 0; $i < count($arrArtikelValues); $i++) {
-        echo "<tr><td></td> ";
-        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[0]] . "</td>";
-        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[1]] . "</td>";
-        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[2]] . "</td>";
-        echo "<td> " . $arrArtikelValues[$i][$arrArtikelHeader[3]] . "</td>";
-        echo "</tr>";
+        echo '<tr><td></td> ';
+        echo '<td> ' . $arrArtikelValues[$i][$arrArtikelHeader[0]] . '</td>';
+        echo '<td> ' . $arrArtikelValues[$i][$arrArtikelHeader[1]] . '</td>';
+        echo '<td> ' . $arrArtikelValues[$i][$arrArtikelHeader[2]] . '</td>';
+        echo '<td><img src="/SpDesign/resources/images/produkte/' . $arrArtikelValues[$i][$arrArtikelHeader[3]] . '" alt="Image" ></td>';
+        echo '</tr>';
       }
       ?>
     </tbody>
