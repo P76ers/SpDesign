@@ -30,7 +30,7 @@
           } else {
             echo "class='nav-link'";
           }
-          if (isset($_SESSION["login"]) == true) {
+          if (isset($_SESSION["login"]) && is_bool($_SESSION["login"])) {
             echo " href='logout.php'> Logout";
           } else {
             echo "href='login.php'> Login";
@@ -41,3 +41,9 @@
     </div>
   </div>
 </nav>
+
+<?php
+// echo '<pre>', var_dump($_SESSION), '</pre>';
+
+
+?>
