@@ -1,6 +1,7 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
 wrongUrl();
+session_start();
 
 $title = 'Services';
 $bgImage = '/SpDesign/resources/images/background/typ.png';

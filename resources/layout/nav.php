@@ -24,8 +24,18 @@
             href="kontakt.php">Kontakt</a>
         </li>
         <li class="nav-item">
-          <a class="<?= urlIs("/SpDesign/login.php") ? "nav-link active" : "nav-link" ?>" href="
-              login.php">Login</a>
+          <a <?php
+          if (urlIs("/SpDesign/login.php") || urlIs("/SpDesign/member.php")) {
+            echo "class='nav-link active' ";
+          } else {
+            echo "class='nav-link'";
+          }
+          if (isset($_SESSION["login"]) == true) {
+            echo " href='logout.php'> Logout";
+          } else {
+            echo "href='login.php'> Login";
+          }
+          ?> </a>
         </li>
       </ul>
     </div>

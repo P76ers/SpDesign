@@ -10,19 +10,19 @@ function wrongUrl()
   $url = parse_url($_SERVER["REQUEST_URI"])["path"];
   // echo $url;
 
-  $routes = [
-    "/SpDesign/index.php" => "",
-    "/SpDesign/produkte.php" => "",
-    "/SpDesign/services.php" => "",
-    "/SpDesign/kontakt.php" => "",
-    "/SpDesign/login.php" => "",
-    "/SpDesign/signUp.php" => ""
-  ];
+  // $routes = [
+  //   "/SpDesign/index.php" => "",
+  //   "/SpDesign/produkte.php" => "",
+  //   "/SpDesign/services.php" => "",
+  //   "/SpDesign/kontakt.php" => "",
+  //   "/SpDesign/login.php" => "",
+  //   "/SpDesign/signUp.php" => ""
+  // ];
 
 
-  if (array_key_exists($url, $routes) == false) {
-    header("location: 404.php");
-  }
+  // if (array_key_exists($url, $routes) == false) {
+  //   header("location: 404.php");
+  // }
 }
 
 function dbConnect()
