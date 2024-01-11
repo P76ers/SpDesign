@@ -1,6 +1,6 @@
 <?php
+include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
 session_start();
-$user["susan@gmail.com"] = "pw1";
 
 // echo '<pre>', var_dump($_SESSION), '</pre>';
 // echo '<pre>', var_dump($_POST), '</pre>';
@@ -13,9 +13,20 @@ if (
 ) {
   $_SESSION["user"] = $_POST["user"];
 
+  $con = dbConnect();
+  $sql = 'SELECT Email, Password 
+            FROM kunden 
+            WHERE Email="' . $_POST["user"] . '" 
+              AND Password="' . $_POST["pass"] . '";
+            ';
+
+  $result = mysqli_query($con, $sql);
+
+  $erg = mysqli_num_rows($result);
+
   if (
     $_SESSION["cap"] == $_POST["eingabe"] &&
-    $user[$_POST["user"]] == $_POST["pass"]
+    $erg == 1
   ) {
     $_SESSION["login"] = true;
     header("Location:produkte.php");
