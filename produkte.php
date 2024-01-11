@@ -1,6 +1,7 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
 wrongUrl();
+session_start();
 
 $title = 'Produkte';
 $bgImage = '/SpDesign/resources/images/background/peachall.png';

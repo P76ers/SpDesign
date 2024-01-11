@@ -8,8 +8,8 @@ $text = implode($text);
 $capt = substr($text, 0, 6);
 
 // Session starten und setzen
-// session_start();
-// $_SESSION["cap"] = $capt;
+session_start();
+$_SESSION["cap"] = $capt;
 
 // Version 2
 for ($i = 0; $i < 6; $i++)
