@@ -15,7 +15,6 @@
       <div class="contact-page-form">
         <div class="row">
           <div class="col-lg-12 align-self-center">
-
             <form id="contact" action="authenticate.php" method="post">
               <div class="row">
                 <div class="col-lg-12">
@@ -42,16 +41,6 @@
                 <div class="col-lg-12">
                   <input name="eingabe" type="text" id="captcha" placeholder="Captcha*" required="">
                 </div>
-
-                <?php
-                // echo '<pre>', var_dump($_SESSION), '</pre>';
-                // echo '<pre>', var_dump($_POST), '</pre>';
-                
-                if (isset($_SESSION["login"]) == "falsches Passwort!") {
-                  echo "<b style='color: #FF565B'>Falsche Zugangsdaten eingegeben!</b>";
-                }
-                ?>
-
                 <div class="col-lg-12">
                   <button type="submit" id="form-submit" class="main-button ">LogIn</button>
                 </div>
