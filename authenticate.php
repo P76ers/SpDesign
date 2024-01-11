@@ -27,6 +27,4 @@ if (
   // header("Location:index.php");
 }
 
-
-
 ?>
