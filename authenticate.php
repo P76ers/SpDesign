@@ -1,6 +1,6 @@
 <?php
 session_start();
-$user["Susan"] = "pw1";
+$user["susan@gmail.com"] = "pw1";
 
 // echo '<pre>', var_dump($_SESSION), '</pre>';
 // echo '<pre>', var_dump($_POST), '</pre>';

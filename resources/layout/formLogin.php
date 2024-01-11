@@ -26,8 +26,14 @@
                 </div>
 
                 <div class="col-lg-6">
-                  <input name="user" type="text" id="first-name" placeholder="Username*" required="" value="Susan">
+                  <input name="user" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required=""
+                    value="susan@gmail.com">
                 </div>
+
+                <!-- <div class="col-lg-6">
+                  <input name="user" type="text" id="first-name" placeholder="Username*" required="" value="Susan">
+                </div> -->
+
                 <div class="col-lg-6">
                   <input name="pass" type="password" id="pw" placeholder="Password*" required="" value="pw1">
                 </div>
