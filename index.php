@@ -6,6 +6,7 @@ session_start();
 $title = 'Home';
 $bgImage = '/SpDesign/resources/images/background/blackall.png';
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/produkt.php");
 ?>
 
 

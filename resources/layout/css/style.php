@@ -182,6 +182,7 @@ $background_url = $_GET["bgImage"];
     position: absolute;
     width: 100%;
     padding: 0px;
+    background-color: black;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -292,12 +293,12 @@ $background_url = $_GET["bgImage"];
   }
 
   .navbar-light .navbar-nav .nav-item .nav-link:hover {
-    color: #ff565b;
+    color: white;
   }
 
   .navbar-light .navbar-nav .nav-item .active {
     font-weight: 400;
-    color: #ff565b;
+    color: black;
     background-color: transparent;
     border-radius: 0px;
     border-top: none;
@@ -305,10 +306,10 @@ $background_url = $_GET["bgImage"];
 
   @media (min-width: 992px) {
     .navbar-light .navbar-nav .nav-item .active {
-      background-color: #ffffff;
+      background-color: #ff565b;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;
-      border-top: 2px solid #ff565b;
+      border-top: 2px solid white
     }
   }
 

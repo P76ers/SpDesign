@@ -9,7 +9,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
 ?>
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/produkt.php");
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/table.php");
 ?>
 
