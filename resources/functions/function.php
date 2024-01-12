@@ -86,9 +86,8 @@ function createTables()
   $sql = "CREATE TABLE IF NOT EXISTS kunden 
         (
           KundenID int AUTO_INCREMENT PRIMARY KEY, 
-          Username varchar(20), 
-          Password varchar(20),   
           Email varchar(50), 
+          Password varchar(20),   
           Privilegien varchar(10), 
           UNIQUE (Email)
         ) Engine=InnoDB;";
@@ -182,9 +181,8 @@ function insertInto(...$tableValues)
       break;
     case 'kunden':
       $header = "
-                  Username, 
-                  Password, 
                   Email, 
+                  Password, 
                   Privilegien
                 ";
   }

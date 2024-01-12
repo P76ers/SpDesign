@@ -13,10 +13,9 @@ createDB("suits");
 // insertInto("artikelkategorien", "'Accessoires'", "'access.png'", "'Stilvollle Accessoires!'");
 
 
-// insertInto("kunden", "'Susan'", "'pw1'", "'susan@gmail.com'", "'admin'");
-// insertInto("kunden", "'Sadaf'", "'pw2'", "'sadaf@gmail.com'", "'admin'");
-// insertInto("kunden", "'P'", "'pw3'", "'p@gmail.com'", "'admin'");
-// insertInto("kunden", "'dummy'", "'pw4'", "'dummy@gmail.com'", "'none'");
+// insertInto("kunden", "'susan@gmail.com'", "'pw1'", "'admin'");
+// insertInto("kunden", "'sadaf@gmail.com'", "'pw2'", "'admin'");
+// insertInto("kunden", "'p@gmail.com'", "'pw3'", "'admin'");
 
 // insertInto("artikel", "'Roma Anzug sand'", "'Pure S110er Schurwolle von Vitale Barberis Canonico, Italien'", 498, "'1.png'", 0, 1);
 
