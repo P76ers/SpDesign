@@ -19,13 +19,14 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="section-heading">
-                    <h2>LogIn
+                    <h2>LogIn</h2>
+                    <h5>
                       <?php
                       if (isset($_SESSION["login"]) == "falsches Passwort!") {
                         echo "<center><b style='color: #FF565B'>Falsche Zugangsdaten eingegeben!</b></center>";
                       }
                       ?>
-                    </h2>
+                    </h5>
                     <br><b style="color: #FF565B">Need an account?</b> <u><a href="/SpDesign/signUp.php">Sign
                         up</a></u>
                   </div>
