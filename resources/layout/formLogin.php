@@ -15,7 +15,7 @@
       <div class="contact-page-form">
         <div class="row">
           <div class="col-lg-12 align-self-center">
-            <form id="contact" action="authenticate.php" method="post">
+            <form id="contact" action="/SpDesign/resources/database/authenticate.php" method="post">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="section-heading">

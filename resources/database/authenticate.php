@@ -2,9 +2,6 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
 session_start();
 
-// echo '<pre>', var_dump($_SESSION), '</pre>';
-// echo '<pre>', var_dump($_POST), '</pre>';
-
 if (
   isset($_POST["user"]) &&
   isset($_POST["pass"]) &&
@@ -15,10 +12,10 @@ if (
 
   $con = dbConnect();
   $sql = 'SELECT Email, Password 
-            FROM kunden 
-            WHERE Email="' . $_POST["user"] . '" 
-              AND Password="' . $_POST["pass"] . '";
-            ';
+          FROM kunden 
+          WHERE Email="' . $_POST["user"] . '" 
+            AND Password="' . $_POST["pass"] . '";
+          ';
 
   $result = mysqli_query($con, $sql);
 
@@ -29,13 +26,13 @@ if (
     $erg == 1
   ) {
     $_SESSION["login"] = true;
-    header("Location:produkte.php");
+    header("Location:/SpDesign/produkte.php");
   } else {
     $_SESSION["login"] = "falsches Passwort!";
-    header("Location:login.php");
+    header("Location:/SpDesign/login.php");
   }
 } else {
-  // header("Location:index.php");
+  header("Location:/SpDesign/index.php");
 }
 
 ?>
