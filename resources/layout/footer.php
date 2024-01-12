@@ -19,10 +19,10 @@
         <div class="er-care">
           <h4>Services</h4>
           <ul class="info">
-            <li><a href="#">custom made</a></li>
-            <li><a href="#">Beratung</a></li>
-            <li><a href="#">Termin vereinbaren</a></li>
-            <li><a href="#">Änderung</a></li>
+            <li><a href="kontakt.php">custom made</a></li>
+            <li><a href="kontakt.php">Beratung</a></li>
+            <li><a href="kontakt.php">Termin vereinbaren</a></li>
+            <li><a href="kontakt.php">Änderung</a></li>
           </ul>
         </div>
       </div>
@@ -31,12 +31,12 @@
         <div class="customer-care">
           <h4>Produkte</h4>
           <ul class="info">
-            <li><a href="#">Anzüge</a></li>
-            <li><a href="#">Sakkos</a></li>
-            <li><a href="#">Hosen</a></li>
-            <li><a href="#">Hemden</a></li>
-            <li><a href="#">Mäntel</a></li>
-            <li><a href="#">Schuhe</a></li>
+            <li><a href="produkte.php">Anzüge</a></li>
+            <li><a href="produkte.php">Hemden</a></li>
+            <li><a href="produkte.php">Hosen</a></li>
+            <li><a href="produkte.php">Mäntel</a></li>
+            <li><a href="produkte.php">Schuhe</a></li>
+            <li><a href="produkte.php">Accessoires</a></li>
           </ul>
         </div>
       </div>
@@ -45,9 +45,6 @@
         <div class="follow-us">
           <h4>Unternehmen</h4>
           <ul class="social-links">
-            <li><a href="#">about us</a></li>
-            <li><a href="#">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
             <li>
               <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -85,7 +82,7 @@
         <div class="sub-footer">
           <div class="row">
             <div class="col-lg-6">
-              <p>Copyright © 2022 S&P Design., Ltd. All Rights Reserved.
+              <p>Copyright © 2024 S&P Design., Ltd. All Rights Reserved.
               </p>
             </div>
             <div class="col-lg-6">
