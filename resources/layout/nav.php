@@ -25,7 +25,7 @@
         </li>
         <li class="nav-item">
           <a <?php
-          if (urlIs("/SpDesign/login.php") || urlIs("/SpDesign/member.php")) {
+          if (urlIs("/SpDesign/login.php") || urlIs("/SpDesign/member.php") || urlIs("/SpDesign/signUp.php")) {
             echo "class='nav-link active' ";
           } else {
             echo "class='nav-link'";

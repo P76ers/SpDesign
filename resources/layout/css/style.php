@@ -292,8 +292,8 @@ $background_url = $_GET["bgImage"];
     transition: all 0.5s;
   }
 
-  .navbar-light .navbar-nav .nav-item .nav-link:hover {
-    color: white;
+  .navbar-light .navbar-nav .nav-item .nav-link:hover:not(.active) {
+    color: #ff565b;
   }
 
   .navbar-light .navbar-nav .nav-item .active {
@@ -309,7 +309,7 @@ $background_url = $_GET["bgImage"];
       background-color: #ff565b;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;
-      border-top: 2px solid white
+      border-top: 2px solid white;
     }
   }
 
