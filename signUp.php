@@ -8,7 +8,7 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"])) {
   wrongUrl();
 
 
-  $title = 'Login';
+  $title = 'SignUp';
   $bgImage = '/SpDesign/resources/images/background/signUp.png';
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
 
