@@ -9,10 +9,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
 
 <?php
 $header = "HTTP 404";
-$text = "Page not found- redirect in 5 sek";
+$text = "Page not found- redirect in 2 sek";
 $class = "alert-danger";
 $redirect = true;
-$redirectUrl = "/SpDesign/index.php";
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
 ?>
 

@@ -9877,3 +9877,7 @@ div.date {
   align-items: center;
   height: 100%;
 }
+
+.hideIt {
+  display:none;
+}

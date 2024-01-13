@@ -57,6 +57,7 @@ if (
     unset($_SESSION["error"]);
     unset($_SESSION["cap"]);
     $_SESSION["login"] = true;
+    $_SESSION["newUser"] = true;
 
     header("Location:/SpDesign/produkte.php");
   }

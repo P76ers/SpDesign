@@ -26,6 +26,7 @@ if (
     $erg == 1
   ) {
     $_SESSION["login"] = true;
+    $_SESSION["show"] = true;
     header("Location:/SpDesign/produkte.php");
   } else {
     $_SESSION["login"] = "falsches Passwort!";

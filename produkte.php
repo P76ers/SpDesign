@@ -10,6 +10,21 @@ include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
 
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/table.php");
+if (isset($_SESSION["show"]) && $_SESSION["show"] == true) {
+  unset($_SESSION["show"]);
+  $header = "Success";
+  $text = "Sie sind eingeloggt";
+  $class = "alert-success";
+  $redirect = false;
+  include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
+} else if (isset($_SESSION["newUser"]) && $_SESSION["newUser"] == true) {
+  unset($_SESSION["newUser"]);
+  $header = "Success";
+  $text = "Sie haben sich erfolgreich registriert!";
+  $class = "alert-success";
+  $redirect = false;
+  include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
+}
 ?>
 
 <?php
