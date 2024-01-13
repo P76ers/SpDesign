@@ -1,6 +1,16 @@
-<script>
-  window.setTimeout('location.href=\"<?= $redirect ?>\"', 3000);
-</script>
+<?php
+if ($redirect == true) {
+  echo "
+  <script>
+    window.setTimeout('location.href=\"index.php\"', 3000);
+  </script>
+  ";
+  // die();
+}
+
+?>
+
+
 
 <div class="Modal-Background">
   <div class="modal fade show" id="myModal" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
