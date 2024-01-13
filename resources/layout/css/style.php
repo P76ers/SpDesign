@@ -1570,5 +1570,16 @@ $background_url = $_GET["bgImage"];
     height: 128px;
   }
 
+  .Modal-Background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 3;
+  }
+
   /*# sourceMappingURL=style.css.map */
 </style>

@@ -14,7 +14,6 @@
   </title>
 
   <!-- Bootstrap core CSS -->
-  <!-- <link href="/SpDesign/resources/layout/css/table.css" rel="stylesheet"> -->
   <link href="/SpDesign/resources/layout/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Additional CSS Files -->

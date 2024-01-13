@@ -1,17 +1,27 @@
 <script>
-  window.setTimeout('location.href=\"index.php\"', 5000);
+  window.setTimeout('location.href=\"<?= $redirect ?>\"', 3000);
 </script>
-<link rel="stylesheet" href="/SpDesign/resources/layout/css/modal.css">
 
-<body>
-  <div class="Modal-Background">
-    <div class="Center-Block Absolute-Center">
-      <div class="Center-Content">
-        <h4 class="Title">HTTP 404</h4>
-        <p>Page not found - Redirect in 3 sek</p>
+<div class="Modal-Background">
+  <div class="modal fade show" id="myModal" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+    style="display: block;" aria-modal="true" role="dialog">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header <?= $class ?>">
+          <h5 class="modal-title" id="exampleModalCenterTitle">
+            <?= $header ?>
+          </h5>
+
+        </div>
+        <div class="modal-body <?= $class ?>">
+          <p>
+            <?= $text ?>
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
-</body>
 
-</html>
+</div>

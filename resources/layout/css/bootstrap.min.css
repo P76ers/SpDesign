@@ -4693,7 +4693,7 @@ fieldset:disabled .btn {
 }
 .alert-success {
   color: #0f5132;
-  background-color: #d1e7dd;
+  background-color: black;
   border-color: #badbcc;
 }
 .alert-success .alert-link {
@@ -4716,8 +4716,8 @@ fieldset:disabled .btn {
   color: #523e02;
 }
 .alert-danger {
-  color: #842029;
-  background-color: #f8d7da;
+  color: #ff565b;
+  background-color: black;
   border-color: #f5c2c7;
 }
 .alert-danger .alert-link {
