@@ -1,1 +1,1 @@
-<input class="date" type="text" name="datum" id="datetimepicker" />
+<input class="date" type="text" name="datum" id="datetimepicker" required />

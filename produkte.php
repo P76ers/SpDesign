@@ -16,6 +16,7 @@ if (isset($_SESSION["show"]) && $_SESSION["show"] == true) {
   $text = "Sie sind eingeloggt";
   $class = "alert-success";
   $redirect = false;
+  $timerShow = 2000;
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
 } else if (isset($_SESSION["newUser"]) && $_SESSION["newUser"] == true) {
   unset($_SESSION["newUser"]);
@@ -23,6 +24,14 @@ if (isset($_SESSION["show"]) && $_SESSION["show"] == true) {
   $text = "Sie haben sich erfolgreich registriert!";
   $class = "alert-success";
   $redirect = false;
+  $timerShow = 2000;
+  include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
+} else if (isset($_SESSION["anfrage"]) && $_SESSION["anfrage"] == true) {
+  $header = "Anfrage gesendet";
+  $text = "Termin zum " . $_SESSION["datum"] . " wird bearbeitet";
+  $class = "alert-success";
+  $redirect = false;
+  $timerShow = 5000;
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
 }
 ?>

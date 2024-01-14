@@ -13,7 +13,7 @@ if ($redirect == true) {
     $('#modalBack').addClass('hideIt');
     $('#myModal').removeClass('show');
     $('#myModal').addClass('hide');
-  }, 2000);
+  }, " . $timerShow . ");
   </script>
   '";
 }
