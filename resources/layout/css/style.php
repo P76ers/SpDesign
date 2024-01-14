@@ -65,7 +65,27 @@ $background_url = $_GET["bgImage"];
     transition: all 0.5s;
   }
 
+  button.buy {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #ff565b;
+    padding: 11px 25px;
+    border-radius: 7.5px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 20%;
+  }
+
   button.main-button:hover {
+    background-color: #2a2a2a;
+  }
+
+  button.buy:hover {
     background-color: #2a2a2a;
   }
 
@@ -1581,5 +1601,48 @@ $background_url = $_GET["bgImage"];
     z-index: 3;
   }
 
-  /*# sourceMappingURL=style.css.map */
+  .btn-buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+
+  .checkbox-wrapper-39 *,
+  .checkbox-wrapper-39 *::before,
+  .checkbox-wrapper-39 *::after {
+    box-sizing: border-box;
+  }
+
+  .checkbox-wrapper-39 label {
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+  .checkbox-wrapper-39 input {
+    visibility: hidden;
+    display: none;
+  }
+
+  .checkbox-wrapper-39 input:checked~.checkbox {
+    transform: rotate(45deg);
+    width: 14px;
+    margin-left: 12px;
+    border-color: #24c78e;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0;
+  }
+
+  .checkbox-wrapper-39 .checkbox {
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #434343;
+    border-radius: 6px;
+    transition: all 0.375s;
+  }
 </style>

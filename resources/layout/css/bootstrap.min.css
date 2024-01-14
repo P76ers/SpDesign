@@ -1215,6 +1215,13 @@ progress {
     flex: 0 0 auto;
     width: 100%;
   }
+  .col-buy {
+    display: flex;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    margin-top: 25px;
+  }
   .offset-lg-0 {
     margin-left: 0;
   }
@@ -9879,5 +9886,5 @@ div.date {
 }
 
 .hideIt {
-  display:none;
+  display: none;
 }
