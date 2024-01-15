@@ -78,7 +78,7 @@ $background_url = $_GET["bgImage"];
     border: none;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    width: 20%;
+    width: 285px;
   }
 
   button.main-button:hover {
@@ -1644,5 +1644,15 @@ $background_url = $_GET["bgImage"];
     border: 1px solid #434343;
     border-radius: 6px;
     transition: all 0.375s;
+  }
+
+  td.buy {
+    background-color: #24c78e;
+    text-align: left;
+  }
+
+  td.buy-gesamtpreis {
+    text-align: right;
+
   }
 </style>

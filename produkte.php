@@ -1,7 +1,12 @@
 <?php
+session_start();
+
+if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_SESSION["caddy"]) && $_SESSION["caddy"] != "") {
+  header("Location:/SpDesign/bestellung.php");
+}
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
 wrongUrl();
-session_start();
+
 
 $title = 'Produkte';
 $bgImage = '/SpDesign/resources/images/background/peachall.png';
