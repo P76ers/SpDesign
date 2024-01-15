@@ -14,6 +14,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
 // echo '<pre>', var_dump($_SESSION), '</pre>';
 // echo '<pre>', var_dump($_POST), '</pre>';
 
+
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/table.php");
 if (isset($_SESSION["newUser"]) && $_SESSION["newUser"] == true) {
   unset($_SESSION["newUser"]);

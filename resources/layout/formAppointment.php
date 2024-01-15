@@ -1,7 +1,7 @@
 <?php
 
-echo '<pre>', var_dump($_SESSION), '</pre>';
-echo '<pre>', var_dump($_POST), '</pre>';
+// echo '<pre>', var_dump($_SESSION), '</pre>';
+// echo '<pre>', var_dump($_POST), '</pre>';
 
 if (isset($_SESSION["login"]) && is_bool($_SESSION["login"])) {
   $iframe = '';
@@ -100,11 +100,15 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"])) {
                 </div>
 
                 <div class="col-lg-12">
-                  <button type="submit" id="form-submit" class="main-button ">
-                    <?= $btnText ?>
-                  </button>
+                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
+                    required=""></textarea>
+
+                  <div class="col-lg-12">
+                    <button type="submit" id="form-submit" class="main-button ">
+                      <?= $btnText ?>
+                    </button>
+                  </div>
                 </div>
-              </div>
             </form>
           </div>
 

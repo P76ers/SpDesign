@@ -96,10 +96,9 @@ function createTables()
   $sql = "CREATE TABLE IF NOT EXISTS termine
             (
               TerminID int(11) AUTO_INCREMENT PRIMARY KEY,
-              Status int(11),
+              Status varchar(20),
               Datum  varchar(10),
               Uhrzeit varchar(10),
-              Berater varchar(10), 
               Message longtext, 
               KundenNr int, 
               CONSTRAINT fkKunden FOREIGN KEY (KundenNr) 
