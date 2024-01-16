@@ -6,15 +6,12 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"])) {
 } else {
 
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/functions/function.php");
-  // wrongUrl();
+  wrongUrl();
   $_SESSION["startzeit"] = date("d.m.Y, H:i:s");
 
   $title = 'SignUp';
   $bgImage = '/SpDesign/resources/images/background/signUp.png';
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
-
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/formSignUp.php");
-
-
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/footer.php");
 }

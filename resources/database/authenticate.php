@@ -14,7 +14,6 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["da
   $_SESSION["AnfrageDatum"] = $date[0];
   $_SESSION["AnfrageUhrzeit"] = $date[1];
 
-
   $sql = 'INSERT INTO termine 
           (
             Status, 
@@ -34,6 +33,13 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["da
           ';
 
   mysqli_query($con, $sql);
+
+  unset($_SESSION["AnfrageDatum"]);
+  unset($_SESSION["AnfrageUhrzeit"]);
+  unset($_SESSION["message"]);
+  // die("break bei POST");
+  header("Location:/SpDesign/services.php");
+
 } else
   if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["datum"])) {
     $_SESSION["datum"] = $_POST["datum"];
@@ -41,7 +47,7 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["da
     $date = explode(" ", $_POST["datum"]);
     $_SESSION["AnfrageDatum"] = $date[0];
     $_SESSION["AnfrageUhrzeit"] = $date[1];
-    header("Location:/SpDesign/produkte.php");
+    header("Location:/SpDesign/services.php");
   } else
 
     if (
@@ -51,7 +57,6 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["da
       isset($_SESSION["startzeit"])
     ) {
       $_SESSION["user"] = $_POST["user"];
-
 
       $sql = 'SELECT KundenID, Email, Password 
           FROM kunden 
@@ -76,7 +81,7 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["da
         $erg == 1
       ) {
         if (isset($_POST["datum"]) && isset($_POST["message"])) {
-
+          // Kontaktanfrage und Login
 
           $_SESSION["datum"] = $_POST["datum"];
           $_SESSION["message"] = str_replace("\r\n", " ", $_POST["message"]);
@@ -108,7 +113,16 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["da
 
           mysqli_query($con, $sql);
 
-          header("Location:/SpDesign/produkte.php");
+          unset($_SESSION["anfrage"]);
+          unset($_SESSION["AnfrageDatum"]);
+          unset($_SESSION["AnfrageUhrzeit"]);
+          unset($_SESSION["message"]);
+          unset($_SESSION["datum"]);
+
+          // echo '<pre>', var_dump($_SESSION), '</pre>';
+          // echo '<pre>', var_dump($_POST), '</pre>';
+
+          header("Location:/SpDesign/services.php");
         }
         $_SESSION["login"] = true;
         $_SESSION["show"] = true;
@@ -125,5 +139,4 @@ if (isset($_SESSION["login"]) && is_bool($_SESSION["login"]) && isset($_POST["da
     } else {
       header("Location:/SpDesign/index.php");
     }
-
 ?>

@@ -14,13 +14,21 @@
             href="produkte.php">Produkte</a>
         </li>
         <li class="nav-item">
-          <a class="<?= urlIs("/SpDesign/services.php") ? "nav-link active" : "nav-link" ?>"
-            href="services.php">Services</a>
-        </li>
-        <li class="nav-item">
           <a class="<?= urlIs("/SpDesign/kontakt.php") ? "nav-link active" : "nav-link" ?>"
             href="kontakt.php">Kontakt</a>
         </li>
+
+        <?php
+        if (isset($_SESSION["login"]) && is_bool($_SESSION["login"])) {
+          ?>
+          <li class="nav-item">
+            <a class="<?= urlIs("/SpDesign/services.php") ? "nav-link active" : "nav-link" ?>" href="services.php">Mein
+              Konto</a>
+          </li>
+          <?php
+        }
+        ?>
+
         <li class="nav-item">
           <a <?php
           if (urlIs("/SpDesign/login.php") || urlIs("/SpDesign/signUp.php")) {

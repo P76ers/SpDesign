@@ -8,10 +8,8 @@ $_SESSION["anfrage"] = true;
 $title = 'Kontakt';
 $bgImage = '/SpDesign/resources/images/background/typ2.png';
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/header.php");
-
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/formAppointment.php");
 ?>
-
 
 
 <?php
