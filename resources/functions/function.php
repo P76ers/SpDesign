@@ -123,7 +123,6 @@ function createTables()
             (
               ArtikelNr int(11),
               BestellNr int(11),
-              Bestelldatum varchar(20),
               Anzahl  int(11),
               PRIMARY KEY (ArtikelNr, BestellNr),
               CONSTRAINT fkArtikel FOREIGN KEY(ArtikelNr) 
@@ -141,6 +140,14 @@ function dropDB($db)
   $con = dbConnect();
   $sql = "DROP DATABASE " . $db;
 
+  mysqli_query($con, $sql);
+}
+
+function dbResetAutoincrement($table)
+{
+  $con = dbConnect();
+  $sql = 'ALTER TABLE ' . $table . ' AUTO_INCREMENT = 0
+  ';
   mysqli_query($con, $sql);
 }
 

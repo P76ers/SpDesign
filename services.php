@@ -20,17 +20,25 @@ if (isset($_SESSION["shopped"]) && $_SESSION["shopped"] == true) {
   $class = "alert-success";
   $redirect = false;
   $timerShow = 3000;
-  unset($_SESSION["show"]);
   include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/modal.php");
 }
-
 // echo '<pre>', var_dump($_SESSION), '</pre>';
 // echo '<pre>', var_dump($_POST), '</pre>';
+?>
+
+<br>
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/tableOrder.php");
+?>
+<br>
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/tableAppointment.php");
 ?>
 
 
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/SpDesign/resources/layout/footer.php");
+unset($_SESSION["show"]);
 unset($_SESSION["datum"]);
 unset($_SESSION["anfrage"]);
 

@@ -889,6 +889,11 @@ $background_url = $_GET["bgImage"];
     text-align: center;
   }
 
+  .page-banner2 {
+    text-align: center;
+    color: #ff565b;
+  }
+
   @media (min-width: 768px) {
     .page-banner {
       padding: 180px 0px;
