@@ -30,7 +30,7 @@ $sql = 'INSERT INTO bestellungen
         );
         ';
 
-// mysqli_query($con, $sql);
+mysqli_query($con, $sql);
 
 $artikel = str_replace("ArtikeliD=", "", $_SESSION["caddy"]);
 $artikel = str_replace(" OR ", " ", $artikel);
@@ -53,7 +53,7 @@ foreach ($artikel as $value) {
           ) 
           ';
 
-  // mysqli_query($con, $sql);
+  mysqli_query($con, $sql);
 }
 
 

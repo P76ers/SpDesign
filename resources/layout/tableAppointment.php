@@ -18,23 +18,23 @@ $zeileTerminHeader = mysqli_fetch_assoc($listeTerminHeader);
 
 $i = 0;
 foreach ($zeileTerminHeader as $key => $value) {
-  $arrArtikelHeader[$i] = $key;
+  $arrTerminHeader[$i] = $key;
   $i++;
 }
 
-$listeArtikelValues = mysqli_query($con, $sql);
+$listeTerminValues = mysqli_query($con, $sql);
 
 $i = 0;
-while ($zeile = mysqli_fetch_assoc($listeArtikelValues)) {
+while ($zeile = mysqli_fetch_assoc($listeTerminValues)) {
   foreach ($zeile as $key => $value) {
-    $arrArtikelValues[$i][$key] = $value;
+    $arrTerminValues[$i][$key] = $value;
   }
   $i++;
 }
 
-// echo $arrArtikelValues[0][$arrArtikelHeader[1]];
-// echo '<pre>', var_dump($arrArtikelHeader), '</pre>';
-// echo '<pre>', var_dump($arrArtikelValues), '</pre>';
+// echo $arrTerminValues[0][$arrTerminHeader[1]];
+// echo '<pre>', var_dump($arrTerminHeader), '</pre>';
+// echo '<pre>', var_dump($arrTerminValues), '</pre>';
 ?>
 
 <div class="page-banner2 change-name2">
@@ -59,28 +59,28 @@ while ($zeile = mysqli_fetch_assoc($listeArtikelValues)) {
   <thead class="table-dark">
     <tr>
       <th data-sortable="true" data-field="Status">
-        <?= $arrArtikelHeader[0] ?>
+        <?= $arrTerminHeader[0] ?>
       </th>
       <th data-sortable="true" data-field="Datum">
-        <?= $arrArtikelHeader[1] ?>
+        <?= $arrTerminHeader[1] ?>
       </th>
       <th data-sortable="true" data-field="Uhrzeit">
 
-        <?= $arrArtikelHeader[2] ?>
+        <?= $arrTerminHeader[2] ?>
       </th>
       <th data-sortable="true" data-field="Message">
-        <?= $arrArtikelHeader[3] ?>
+        <?= $arrTerminHeader[3] ?>
       </th>
     </tr>
   </thead>
   <tbody>
     <?php
-    for ($i = 0; $i < count($arrArtikelValues); $i++) {
+    for ($i = 0; $i < count($arrTerminValues); $i++) {
       echo '<tr>';
-      echo '<td> ' . $arrArtikelValues[$i][$arrArtikelHeader[0]] . '</td>';
-      echo '<td> ' . $arrArtikelValues[$i][$arrArtikelHeader[1]] . '</td>';
-      echo '<td> ' . $arrArtikelValues[$i][$arrArtikelHeader[2]] . '</td>';
-      echo '<td>' . $arrArtikelValues[$i][$arrArtikelHeader[3]] . '</td>';
+      echo '<td> ' . $arrTerminValues[$i][$arrTerminHeader[0]] . '</td>';
+      echo '<td> ' . $arrTerminValues[$i][$arrTerminHeader[1]] . '</td>';
+      echo '<td> ' . $arrTerminValues[$i][$arrTerminHeader[2]] . '</td>';
+      echo '<td>' . $arrTerminValues[$i][$arrTerminHeader[3]] . '</td>';
       echo '</tr>';
     }
     ?>
